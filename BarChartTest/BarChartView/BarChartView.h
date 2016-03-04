@@ -85,6 +85,11 @@ enum BarChartMiddleLineType{
 @property (nonatomic,assign) BOOL pagingEnabled;
 @property (nonatomic,assign) BOOL autoSelectMiddle;
 
+// 是否显示柱状图下面的线
+@property (nonatomic,assign) BOOL showBaseLine;
+@property (nonatomic,strong) UIColor *baseLineColor;
+@property (nonatomic,assign) CGFloat baseLineHeight;
+
 
 // select item
 - (void)selectBarAt:(NSIndexPath *)indexPath;

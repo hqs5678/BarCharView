@@ -275,6 +275,9 @@
         item.titleFontSize = _barTitleFontSize;
         item.titlePadding = _barTitlePadding;
         item.baseLineColor = [UIColor whiteColor];
+        item.showBaseLine = _showBaseLine;
+        item.baseLineColor = _baseLineColor;
+        item.baseLineHeight = _baseLineHeight;
         w = [_delegate barChartView:self titleWidthForBarAtSection:i];
         frame = item.frame;
         frame.size.height = _scrollView.frame.size.height;
@@ -631,7 +634,9 @@
             item.rowSelectable = _barRowSelectable;
             item.titleFontSize = _barTitleFontSize;
             item.titlePadding = _barTitlePadding;
-            item.baseLineColor = [UIColor whiteColor];
+            item.showBaseLine = _showBaseLine;
+            item.baseLineColor = _baseLineColor;
+            item.baseLineHeight = _baseLineHeight;
             w = [_delegate barChartView:self titleWidthForBarAtSection:i];
             frame = item.frame;
             frame.size.height = _scrollView.frame.size.height;

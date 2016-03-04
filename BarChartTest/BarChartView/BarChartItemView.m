@@ -99,7 +99,7 @@
 - (void)setShowBaseLine:(BOOL)showBaseLine{
     _showBaseLine = showBaseLine;
     
-    if (!_showBaseLine) {
+    if (!_baseLine) {
         _baseLine = [[CALayer alloc]init];
         _baseLine.frame = CGRectMake(0, 0, _titleLabel.frame.size.width, _baseLineHeight);
         _baseLine.backgroundColor = _baseLineColor.CGColor;
