@@ -42,8 +42,20 @@
     
     
     CellModel *model = [[CellModel alloc]init];
-    model.title = @"普通柱状图";
+    model.title = @"1. 普通柱状图";
     model.vc = @"ViewController1";
+    
+    [data addObject:model];
+    
+    model = [[CellModel alloc]init];
+    model.title = @"2. 懒加载";
+    model.vc = @"ViewController2";
+    
+    [data addObject:model];
+    
+    model = [[CellModel alloc]init];
+    model.title = @"3. 自动选中中间且调整位置";
+    model.vc = @"ViewController3";
     
     [data addObject:model];
 }
