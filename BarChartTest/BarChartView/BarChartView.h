@@ -89,7 +89,7 @@ enum BarChartMiddleLineType{
 @property (nonatomic,assign) BOOL showBaseLine;
 @property (nonatomic,strong) UIColor *baseLineColor;
 @property (nonatomic,assign) CGFloat baseLineHeight;
-
+@property (nonatomic,assign) CGRect baseLineFrame;
 
 // select item
 - (void)selectBarAt:(NSIndexPath *)indexPath;

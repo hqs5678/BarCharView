@@ -26,8 +26,8 @@
         _barWidth = 10;
         _showTitle = YES;
         _animatable = NO;
-        _baseLineHeight = 1;
-        _baseLineColor = [UIColor whiteColor];
+//        _baseLineHeight = 1;
+//        _baseLineColor = [UIColor whiteColor];
         _rowSelectable = YES;
         _selectedRowIndex = -1;
         _showBaseLine = NO;
@@ -96,21 +96,21 @@
     [self addSubview:_barView];
 }
 
-- (void)setShowBaseLine:(BOOL)showBaseLine{
-    _showBaseLine = showBaseLine;
-    
-    if (!_baseLine) {
-        _baseLine = [[CALayer alloc]init];
-        _baseLine.frame = CGRectMake(0, 0, _titleLabel.frame.size.width, _baseLineHeight);
-        _baseLine.backgroundColor = _baseLineColor.CGColor;
-    }
-    if (_showBaseLine) {
-        [_titleLabel.layer addSublayer:_baseLine];
-    }
-    else{
-        [_baseLine removeFromSuperlayer];
-    }
-}
+//- (void)setShowBaseLine:(BOOL)showBaseLine{
+//    _showBaseLine = showBaseLine;
+//    
+//    if (!_baseLine) {
+//        _baseLine = [[CALayer alloc]init];
+//        _baseLine.frame = CGRectMake(0, 0, _titleLabel.frame.size.width, _baseLineHeight);
+//        _baseLine.backgroundColor = _baseLineColor.CGColor;
+//    }
+//    if (_showBaseLine) {
+//        [_titleLabel.layer addSublayer:_baseLine];
+//    }
+//    else{
+//        [_baseLine removeFromSuperlayer];
+//    }
+//}
 
 - (void)setFrame:(CGRect)frame{
     [super setFrame:frame];
@@ -158,7 +158,7 @@
         }];
     }
     
-    [self resetBaseLine];
+//    [self resetBaseLine];
 }
 
 - (void)setShowTitle:(BOOL)showTitle{
@@ -200,20 +200,20 @@
     [UIView commitAnimations];
 }
 
-- (void)setBaseLineColor:(UIColor *)baseLineColor{
-    _baseLineColor = baseLineColor;
-    [self resetBaseLine];
-}
-
-- (void)setBaseLineHeight:(CGFloat)baseLineHeight{
-    _baseLineHeight = baseLineHeight;
-    [self resetBaseLine];
-}
-
-- (void) resetBaseLine{
-    _baseLine.frame = CGRectMake(0, 0, _titleLabel.frame.size.width, _baseLineHeight);
-    _baseLine.backgroundColor = _baseLineColor.CGColor;
-}
+//- (void)setBaseLineColor:(UIColor *)baseLineColor{
+//    _baseLineColor = baseLineColor;
+//    [self resetBaseLine];
+//}
+//
+//- (void)setBaseLineHeight:(CGFloat)baseLineHeight{
+//    _baseLineHeight = baseLineHeight;
+//    [self resetBaseLine];
+//}
+//
+//- (void) resetBaseLine{
+//    _baseLine.frame = CGRectMake(0, 0, _titleLabel.frame.size.width, _baseLineHeight);
+//    _baseLine.backgroundColor = _baseLineColor.CGColor;
+//}
 
 - (void)setTitleColor:(UIColor *)titleColor{
     _titleColor = titleColor;

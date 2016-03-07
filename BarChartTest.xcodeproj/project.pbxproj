@@ -22,6 +22,7 @@
 		4DEB0B531C4A42F500880D2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEB0B521C4A42F500880D2B /* Main.storyboard */; };
 		4DEB0B561C4A461600880D2B /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB0B551C4A461600880D2B /* ViewController2.m */; };
 		4DEB0B591C4A499E00880D2B /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB0B581C4A499E00880D2B /* ViewController3.m */; };
+		4DFB19831C8D7B2B0046A09D /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB19821C8D7B2B0046A09D /* ViewController4.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		4DEB0B551C4A461600880D2B /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		4DEB0B571C4A499E00880D2B /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		4DEB0B581C4A499E00880D2B /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		4DFB19811C8D7B2B0046A09D /* ViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
+		4DFB19821C8D7B2B0046A09D /* ViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,16 +126,18 @@
 			isa = PBXGroup;
 			children = (
 				4DCAAC481C488E120074970B /* BarChartView */,
-				4D1C56961C89892B00A5AD29 /* HomeViewController.h */,
-				4D1C56971C89892B00A5AD29 /* HomeViewController.m */,
 				4D1C56991C898B1000A5AD29 /* CellModel.h */,
 				4D1C569A1C898B1000A5AD29 /* CellModel.m */,
+				4D1C56961C89892B00A5AD29 /* HomeViewController.h */,
+				4D1C56971C89892B00A5AD29 /* HomeViewController.m */,
 				4DEB0B4F1C4A410E00880D2B /* ViewController1.h */,
 				4DEB0B501C4A410E00880D2B /* ViewController1.m */,
 				4DEB0B541C4A461600880D2B /* ViewController2.h */,
 				4DEB0B551C4A461600880D2B /* ViewController2.m */,
 				4DEB0B571C4A499E00880D2B /* ViewController3.h */,
 				4DEB0B581C4A499E00880D2B /* ViewController3.m */,
+				4DFB19811C8D7B2B0046A09D /* ViewController4.h */,
+				4DFB19821C8D7B2B0046A09D /* ViewController4.m */,
 				4DCAAC181C488D110074970B /* AppDelegate.h */,
 				4DCAAC191C488D110074970B /* AppDelegate.m */,
 				4DEB0B521C4A42F500880D2B /* Main.storyboard */,
@@ -319,6 +324,7 @@
 				4D1C569B1C898B1000A5AD29 /* CellModel.m in Sources */,
 				4D1C56981C89892B00A5AD29 /* HomeViewController.m in Sources */,
 				4DCAAC1A1C488D110074970B /* AppDelegate.m in Sources */,
+				4DFB19831C8D7B2B0046A09D /* ViewController4.m in Sources */,
 				4DCAAC4B1C488E2D0074970B /* BarChartItemView.m in Sources */,
 				4DEB0B561C4A461600880D2B /* ViewController2.m in Sources */,
 				4DCAAC4E1C488E500074970B /* BarChartView.m in Sources */,

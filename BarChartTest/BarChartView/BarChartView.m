@@ -64,6 +64,8 @@
     _barOffset  = [NSMutableDictionary dictionary];
     _refreshState = BarChartViewRefreshStateNormal;
     kRefreshWidth = self.frame.size.width * 0.1;
+    _showBaseLine = YES;
+    _baseLineColor = [UIColor whiteColor];
     
     CGRect frame = self.frame;
     frame.size.width = kRefreshWidth;
@@ -88,10 +90,13 @@
     }
     if (!_baseLine) {
         _baseLine = [[CALayer alloc]init];
-        CGFloat h = 0.5;
-        _baseLine.frame = CGRectMake(0, self.frame.size.height - self.barTitlePadding * 2 - self.barTitleFontSize - h, self.frame.size.width, h);
-        _baseLine.backgroundColor = [UIColor whiteColor].CGColor;
     }
+    CGFloat h = self.baseLineHeight;
+    if (h == 0) {
+        h = 0.5;
+    }
+    _baseLine.frame = CGRectMake(0, self.frame.size.height - self.barTitlePadding * 2 - self.barTitleFontSize - h, self.frame.size.width, h);
+    _baseLine.backgroundColor = self.baseLineColor.CGColor;
     [self.layer insertSublayer:_baseLine atIndex:0];
 }
 
@@ -269,15 +274,15 @@
         item.barWidth = [_delegate barChartView:self widthForBarAtSection:i];
         item.animatable = self.animatable;
         item.value = [self trueValue:item.value];
-        item.baseLineHeight = 0.5;
+//        item.baseLineHeight = 0.5;
         item.titleColor = _barTitleColor;
         item.rowSelectable = _barRowSelectable;
         item.titleFontSize = _barTitleFontSize;
         item.titlePadding = _barTitlePadding;
-        item.baseLineColor = [UIColor whiteColor];
+//        item.baseLineColor = [UIColor whiteColor];/
         item.showBaseLine = _showBaseLine;
-        item.baseLineColor = _baseLineColor;
-        item.baseLineHeight = _baseLineHeight;
+//        item.baseLineColor = _baseLineColor;
+//        item.baseLineHeight = _baseLineHeight;
         w = [_delegate barChartView:self titleWidthForBarAtSection:i];
         frame = item.frame;
         frame.size.height = _scrollView.frame.size.height;
@@ -577,6 +582,27 @@
     } 
 }
 
+- (void)setBaseLineColor:(UIColor *)baseLineColor{
+    if (_baseLine) {
+        _baseLine.backgroundColor = baseLineColor.CGColor;
+    }
+}
+
+- (void)setBaseLineFrame:(CGRect)baseLineFrame{
+    if (_baseLine) {
+        _baseLine.frame = baseLineFrame;
+    }
+}
+
+- (CGRect)baseLineFrame{
+    if (_baseLine) {
+        return _baseLine.frame;
+    }
+    else{
+        return CGRectZero;
+    }
+}
+
 - (void)setHeaderRefreshingBlock:(BarChartViewRefreshBlock)block{
     headerRefreshBlock = block;
 }
@@ -629,14 +655,14 @@
             item.barWidth = [_delegate barChartView:self widthForBarAtSection:i];
             item.animatable = self.animatable;
             item.value = [self trueValue:item.value];
-            item.baseLineHeight = 0.5;
+//            item.baseLineHeight = 0.5;
             item.titleColor = _barTitleColor;
             item.rowSelectable = _barRowSelectable;
             item.titleFontSize = _barTitleFontSize;
             item.titlePadding = _barTitlePadding;
             item.showBaseLine = _showBaseLine;
-            item.baseLineColor = _baseLineColor;
-            item.baseLineHeight = _baseLineHeight;
+//            item.baseLineColor = _baseLineColor;
+//            item.baseLineHeight = _baseLineHeight;
             w = [_delegate barChartView:self titleWidthForBarAtSection:i];
             frame = item.frame;
             frame.size.height = _scrollView.frame.size.height;
@@ -699,14 +725,14 @@
             item.barWidth = [_delegate barChartView:self widthForBarAtSection:i];
             item.animatable = self.animatable;
             item.value = [self trueValue:item.value];
-            item.baseLineHeight = 0.5;
+//            item.baseLineHeight = 0.5;
             item.titleColor = _barTitleColor;
             item.rowSelectable = _barRowSelectable;
             item.titleFontSize = _barTitleFontSize;
             item.titlePadding = _barTitlePadding;
             item.showBaseLine = _showBaseLine;
-            item.baseLineColor = _baseLineColor;
-            item.baseLineHeight = _baseLineHeight;
+//            item.baseLineColor = _baseLineColor;
+//            item.baseLineHeight = _baseLineHeight;
             w = [_delegate barChartView:self titleWidthForBarAtSection:i];
             frame = item.frame;
             frame.size.height = _scrollView.frame.size.height;

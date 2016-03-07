@@ -58,6 +58,18 @@
     model.vc = @"ViewController3";
     
     [data addObject:model];
+    
+    model = [[CellModel alloc]init];
+    model.title = @"4. 仿小米睡眠";
+    model.vc = @"ViewController4";
+    
+    [data addObject:model];
+    
+    model = [[CellModel alloc]init];
+    model.title = @"5. 上下分段";
+    model.vc = @"ViewController4";
+    
+    [data addObject:model];
 }
 
 
