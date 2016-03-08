@@ -37,7 +37,7 @@
     self.barChart.normalBarColor = [UIColor whiteColor];
     self.barChart.highlightBarColor = [UIColor lightGrayColor];
     self.barChart.titleStep = 2;
-    self.barChart.backgroundColor = [[UIColor blueColor]colorWithAlphaComponent:0.5];
+    self.barChart.backgroundColor = [UIColor colorWithRed:0.243 green:0.280 blue:0.522 alpha:1.000];
     
     // 自动选中中间
     self.barChart.autoSelectMiddle = YES;
@@ -49,7 +49,8 @@
     self.barChart.baseLineHeight = 2;
     self.barChart.baseLineColor = [UIColor yellowColor];
     self.barChart.maxValue = 220;
-    
+    self.barChart.barTitleColor = [UIColor whiteColor];
+    self.barChart.baseLineColor = [UIColor whiteColor];
     self.barChart.showTitle = false;
     
     self.barChart.delegate = self;
@@ -91,17 +92,19 @@
     for (int i = 0; i<12; i++) {
         NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
         dict[@"title"] = [NSString stringWithFormat:@"title-%d",i];
-        dict[@"value"] = [NSNumber numberWithFloat: 200];
+        
         dict[@"width"] = [NSNumber numberWithFloat:arc4random() % 100 + 5];
         
         BarRow *row = [[BarRow alloc]init];
         row.highlightColor = [UIColor whiteColor];
         int rand = i % 2;
         if (rand) {
-            row.normalColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.8];
+            dict[@"value"] = [NSNumber numberWithFloat: 200];
+            row.normalColor = [UIColor colorWithRed:0.534 green:0.585 blue:1.000 alpha:1.000];
         }
         else{
-            row.normalColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.8];
+            dict[@"value"] = [NSNumber numberWithFloat: 180];
+            row.normalColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.8];
         }
         NSArray *rows = [NSArray arrayWithObject:row];
         dict[@"rows"] = rows;

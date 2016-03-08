@@ -60,7 +60,7 @@
     [data addObject:model];
     
     model = [[CellModel alloc]init];
-    model.title = @"4. 仿小米睡眠";
+    model.title = @"4. 睡眠情况";
     model.vc = @"ViewController4";
     
     [data addObject:model];
